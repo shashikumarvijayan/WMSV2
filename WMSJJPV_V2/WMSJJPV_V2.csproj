@@ -71,6 +71,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="000UserMaster.aspx" />
+    <Content Include="001Customer.aspx" />
+    <Content Include="002ProductInfo.aspx" />
     <Content Include="001WMSLogin.aspx" />
     <Content Include="002WMSMain.aspx" />
     <Content Include="AJAX\jquery.min.js" />
@@ -2750,6 +2752,20 @@
     </Compile>
     <Compile Include="000UserMaster.aspx.designer.cs">
       <DependentUpon>000UserMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="001Customer.aspx.cs">
+      <DependentUpon>001Customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="001Customer.aspx.designer.cs">
+      <DependentUpon>001Customer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="002ProductInfo.aspx.cs">
+      <DependentUpon>002ProductInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="002ProductInfo.aspx.designer.cs">
+      <DependentUpon>002ProductInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="001WMSLogin.aspx.cs">
       <DependentUpon>001WMSLogin.aspx</DependentUpon>
