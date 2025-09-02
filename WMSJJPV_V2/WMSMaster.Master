@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WMSMaster.master.cs" Inherits="WMSJJPV_V2.WMSMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+     <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+ <link href="CSS/StyleSheet.css" rel="stylesheet" />
+    <link href="BootStrap/5/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="BootStrap/5/java/mdb.min.js"></script>
+      <script src="Alert/sweetalert.min.js"></script>
+       <script src="Toast/3.3.1.min.js"></script>
+    <link href="Toast/toastr.min.css" rel="stylesheet" />
+    <script src="Toast/toastr.min.js"></script>
+      <!-- Custom scripts -->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,165 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Sub.master.cs" Inherits="WMSJJPV_V2.Sub" %>
+
+<!DOCTYPE html>
+
+
+<html>
+<head runat="server">
+ 
+   
+    <title></title>
+
+    <%-- Stylesheets --%>
+    <link href="BootStrap/4/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="CSS/DeliveryManagementMenu.css" rel="stylesheet" />
+    <link href="FontAwesome/css/all.css" rel="stylesheet" />
+       <script src="Toast/3.3.1.min.js"></script>
+    <link href="Toast/toastr.min.css" rel="stylesheet" />
+      <script src="Toast/toastr.min.js"></script>
+    <link href="Ajax/all.min.css" rel="stylesheet" />
+    <%-- Stylesheets --%>
+
+    <%-- JavaScript --%>
+    <script src="jquery331.min.js"></script>
+    <script src="BootStrap/4/js/bootstrap.min.js"></script>
+    <script src="BootStrap/4/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="BootStrap/4/js/popper.min.js"></script>
+    <script src="BootStrap/5/java/bootstrap.bundle.min.js"></script>
+    <script src="AJAX/jquery.min.js"></script>
+    <script src="Alert/sweetalert.min.js"></script>
+    <script src="LogInPageBasicLib/JS/mdb.min.js"></script>
+    <script src="Alert/sweetalert2@11.js"></script>
+     <script src="JQueryAutoFill/jquery-ui.min.js"></script>
+     <link href="JQueryAutoFill/jquery-ui.css" rel="stylesheet" />
+
+    <script>
+        // match your session timeout (20 minutes = 1200000 ms)
+        var sessionTimeout = 20;  // must match web.config (in minutes)
+        var warningBefore = 1;    // warn 1 min before
+
+        var warningTimer, logoutTimer;
+
+        function startSessionTimers() {
+            clearTimeout(warningTimer);
+            clearTimeout(logoutTimer);
+
+            // Show warning popup 1 minute before expiry
+            warningTimer = setTimeout(function () {
+                new swal({
+                    title: "Session Expiring",
+                    text: "You will be logged out in 1 minute.",
+                    icon: "warning",
+                    buttons: false,
+                    timer: warningBefore * 60 * 1000
+                });
+            }, (sessionTimeout - warningBefore) * 60 * 1000);
+
+            // Auto logout after full timeout
+            logoutTimer = setTimeout(function () {
+                window.location.href = '001WMSLogin.aspx';
+            }, sessionTimeout * 60 * 1000);
+        }
+
+        // restart timers whenever the page loads or posts back
+        window.onload = startSessionTimers;
+    </script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+    @media (max-width: 1440px) {
+        .menu ul {
+            font-size: 10px !important;
+        }
+    }
+</style>
+
+
+
+
+
+
+        <script type="text/javascript">
+            function showpop(msg, title) {
+                toastr.options = {
+                    "closeButton": false,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": true,
+                    "positionClass": "toast-top-right",
+                    "preventDuplicates": true,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "1000",
+                    "timeOut": "12000",
+                    "extendedTimeOut": "1000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                }
+                var d = Date();
+                toastr.error(msg, title);
+                return false;
+            }
+          
+
+
+
+        </script>
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+
+        <form id="form1" runat="server">
+        <div class="header">
+            <nav class="menu">
+
+            <div class="header-image-wrapper d-flex align-items-center justify-content-center" 
+     style="position: relative; display: inline-block; border-bottom: 1px solid black; padding-bottom: 5px;">
+    
+    <img src="ImgSrc/MAINWMS.png" style="margin-top: 5px; width: 600px;" />
+
+    <div id="connectionStatusText"
+         class="overlay-text"
+         style="
+             position: absolute;
+             top: 50%;
+             right: 20px;
+             transform: translateY(-50%);
+             font-size: 28px;
+             font-weight: bold;
+             color: yellow;  /* Default */
+             text-shadow: 1px 1px 5px black;">
+        F1–F2
+    </div>
+                </div>
+                  <ul class="d-flex align-items-center" style="justify-content: flex-start; border-bottom: 1px solid black;">
+
+   <li class="<%= Request.Url.AbsolutePath.ToLower().Contains("000UserMaster.aspx") ? "active" : "" %>">
+       <a href="000UserMaster.aspx">User Master</a>
+   </li>
+  
+                      </ul>
+                </nav>
+            </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+              <footer>
+      <div id="footer1" class="container-fluid" style="bottom: -15px">
+          <p class="footerlinks">&copy Developed By Shashi Kumar Vijayan</p>
+      </div>
+  </footer>
+           
+
+            </form>
+</body>
+</html>
+

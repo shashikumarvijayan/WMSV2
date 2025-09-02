@@ -1,0 +1,167 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\wmsjjpv_v2\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|solutionrelative:wmsjjpv_v2\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|c:\\users\\shashikumar_vijayan\\desktop\\1-work\\1-programs\\1-mes\\5-jjpv\\wms_jjpv_v2\\wmsjjpv_v2\\wmsjjpv_v2\\000usermaster.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|solutionrelative:wmsjjpv_v2\\000usermaster.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\wmsjjpv_v2\\000usermaster.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|solutionrelative:wmsjjpv_v2\\000usermaster.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\wmsjjpv_v2\\css\\deliverymanagementmenu.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|solutionrelative:wmsjjpv_v2\\css\\deliverymanagementmenu.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\wmsjjpv_v2\\sub.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|solutionrelative:wmsjjpv_v2\\sub.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\wmsjjpv_v2\\wmsmaster.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|solutionrelative:wmsjjpv_v2\\wmsmaster.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\wmsjjpv_v2\\001wmslogin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|solutionrelative:wmsjjpv_v2\\001wmslogin.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\wmsjjpv_v2\\001wmslogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|solutionrelative:wmsjjpv_v2\\001wmslogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\wmsjjpv_v2\\002wmsmain.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{49D22EA0-6F9E-4A14-A553-1734FA26212B}|WMSJJPV_V2\\WMSJJPV_V2.csproj|solutionrelative:wmsjjpv_v2\\002wmsmain.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DeliveryManagementMenu.css",
+              "DocumentMoniker": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\CSS\\DeliveryManagementMenu.css",
+              "RelativeDocumentMoniker": "WMSJJPV_V2\\CSS\\DeliveryManagementMenu.css",
+              "ToolTip": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\CSS\\DeliveryManagementMenu.css",
+              "RelativeToolTip": "WMSJJPV_V2\\CSS\\DeliveryManagementMenu.css",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAAI0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-29T06:31:49.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "000UserMaster.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\000UserMaster.aspx.cs",
+              "RelativeDocumentMoniker": "WMSJJPV_V2\\000UserMaster.aspx.cs",
+              "ToolTip": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\000UserMaster.aspx.cs",
+              "RelativeToolTip": "WMSJJPV_V2\\000UserMaster.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T03:55:38.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "000UserMaster.aspx",
+              "DocumentMoniker": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\000UserMaster.aspx",
+              "RelativeDocumentMoniker": "WMSJJPV_V2\\000UserMaster.aspx",
+              "ToolTip": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\000UserMaster.aspx",
+              "RelativeToolTip": "WMSJJPV_V2\\000UserMaster.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-29T03:52:27.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "002WMSMain.aspx",
+              "DocumentMoniker": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\002WMSMain.aspx",
+              "RelativeDocumentMoniker": "WMSJJPV_V2\\002WMSMain.aspx",
+              "ToolTip": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\002WMSMain.aspx",
+              "RelativeToolTip": "WMSJJPV_V2\\002WMSMain.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-22T05:40:36.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "001WMSLogin.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\001WMSLogin.aspx.cs",
+              "RelativeDocumentMoniker": "WMSJJPV_V2\\001WMSLogin.aspx.cs",
+              "ToolTip": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\001WMSLogin.aspx.cs",
+              "RelativeToolTip": "WMSJJPV_V2\\001WMSLogin.aspx.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAiwD4AAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T03:21:37.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\Web.config",
+              "RelativeDocumentMoniker": "WMSJJPV_V2\\Web.config",
+              "ToolTip": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\Web.config",
+              "RelativeToolTip": "WMSJJPV_V2\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-08-22T03:04:23.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Sub.Master",
+              "DocumentMoniker": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\Sub.Master",
+              "RelativeDocumentMoniker": "WMSJJPV_V2\\Sub.Master",
+              "ToolTip": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\Sub.Master",
+              "RelativeToolTip": "WMSJJPV_V2\\Sub.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-22T02:28:24.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "001WMSLogin.aspx",
+              "DocumentMoniker": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\001WMSLogin.aspx",
+              "RelativeDocumentMoniker": "WMSJJPV_V2\\001WMSLogin.aspx",
+              "ToolTip": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\001WMSLogin.aspx",
+              "RelativeToolTip": "WMSJJPV_V2\\001WMSLogin.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-22T02:25:56.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WMSMaster.Master",
+              "DocumentMoniker": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\WMSMaster.Master",
+              "RelativeDocumentMoniker": "WMSJJPV_V2\\WMSMaster.Master",
+              "ToolTip": "C:\\Users\\shashikumar_vijayan\\Desktop\\1-Work\\1-Programs\\1-MES\\5-JJPV\\WMS_JJPV_V2\\WMSJJPV_V2\\WMSJJPV_V2\\WMSMaster.Master",
+              "RelativeToolTip": "WMSJJPV_V2\\WMSMaster.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-08-22T02:25:26.21Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
