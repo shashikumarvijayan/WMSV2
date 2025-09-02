@@ -50,6 +50,7 @@
                 `Brother Storage Location : ${row.BrotherSLOC}<br style='margin-bottom:10px;'>` +
                 `Qty / Pallet : ${fmt(row.QtyPerPallet)}`;
         }
+
         function editProduct(id) {
             $.ajax({
                 type: 'POST',
@@ -93,6 +94,7 @@
         }
         $(document).ready(function () {
             var table = $('#tblProducts').DataTable({
+
                 ajax: {
                     url: '002ProductInfo.aspx/ProductInfoMaster',
                     type: 'POST',
@@ -114,6 +116,28 @@
                     {
                         data: 'FG_Id', orderable: false, searchable: false,
                         render: function (id) { return '<a class="btn btn-info btn-delete" data-id="' + id + '">Delete</a>'; }
+
+                'ajax': {
+                    'url': '002ProductInfo.aspx/ProductInfoMaster',
+                    'type': 'POST',
+                    'contentType': 'application/json; charset=utf-8',
+                    'data': function () { return JSON.stringify({ action: 'GetAll', product: {} }); },
+                    'dataSrc': function (json) { return JSON.parse(json.d); }
+                },
+                'columns': [
+                    { 'data': 'FG_Id' },
+                    { 'data': 'FG_SAP_No' },
+                    { 'data': 'SAP_FG_Description' },
+                    { 'data': 'Product_No' },
+                    { 'data': 'Product_Name' },
+                    { 'data': 'Status' },
+                    {
+                        'data': 'FG_Id', 'orderable': false, 'searchable': false,
+                        'render': function (id) { return '<a class="btn btn-info btn-edit" data-id="' + id + '">Edit</a>'; }
+                    },
+                    {
+                        'data': 'FG_Id', 'orderable': false, 'searchable': false,
+                        'render': function (id) { return '<a class="btn btn-info btn-delete" data-id="' + id + '">Delete</a>'; }
                     }
                 ]
             });
@@ -184,10 +208,16 @@
                         <thead>
                             <tr>
                                 <th>Id</th>
+
                                 <th>Product Details</th>
                                 <th>Customer</th>
                                 <th>Supplier</th>
                                 <th>Packaging</th>
+
+                                <th>SAP</th>
+                                <th>Description</th>
+                                <th>Product No</th>
+                                <th>Product Name</th>
                                 <th>Status</th>
                                 <th style="text-align: center; width: 10px;">Edit</th>
                                 <th style="text-align: center; width: 10px;">Delete</th>

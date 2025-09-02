@@ -124,6 +124,7 @@ BEGIN
 
     IF @Action = 'GetAll'
     BEGIN
+
         SELECT FG_Id, FG_SAP_No, SAP_FG_Description, Product_No, Product_Name,
                Model, Drawing_Rev, JJ_Code, Cavity, Die_Line,
                Customer_Name, Customer_Address,
@@ -131,7 +132,7 @@ BEGIN
                Qty_Per_Packing, UOM, Min_Qty, Max_Qty,
                Default_Storage_Location, Division, Label_Format,
                BrotherSloc AS BrotherSLOC, QtyPerPallet,
-               Status
+               Status 
         FROM dbo.ProductInfo
         WHERE ISNULL(Status,'Active') <> 'Inactive';
         RETURN;
@@ -139,6 +140,7 @@ BEGIN
 
     IF @Action = 'GetById'
     BEGIN
+
         SELECT FG_Id, FG_SAP_No, SAP_FG_Description, Product_No, Product_Name,
                Model, Drawing_Rev, JJ_Code, Cavity, Die_Line,
                Customer_Name, Customer_Address,
@@ -154,6 +156,7 @@ BEGIN
 
     IF @Action = 'GetDeleted'
     BEGIN
+
         SELECT FG_Id, FG_SAP_No, SAP_FG_Description, Product_No, Product_Name,
                Model, Drawing_Rev, JJ_Code, Cavity, Die_Line,
                Customer_Name, Customer_Address,
