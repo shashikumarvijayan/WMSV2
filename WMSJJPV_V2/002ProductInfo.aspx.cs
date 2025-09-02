@@ -53,6 +53,7 @@ namespace WMSJJPV_V2
                 cmd.Parameters.AddWithValue("@Default", product.Default);
                 cmd.Parameters.AddWithValue("@BrotherSloc", (object)product.BrotherSloc ?? DBNull.Value);
                 cmd.Parameters.AddWithValue("@QtyPerPallet", (object)product.QtyPerPallet ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@Status", (object)product.Status ?? DBNull.Value);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
             }
@@ -91,6 +92,7 @@ namespace WMSJJPV_V2
             public int Default { get; set; }
             public string BrotherSloc { get; set; }
             public decimal? QtyPerPallet { get; set; }
+            public string Status { get; set; }
         }
     }
 }

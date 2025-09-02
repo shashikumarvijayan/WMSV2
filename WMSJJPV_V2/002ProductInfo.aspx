@@ -36,6 +36,8 @@
             $('#DefaultInput').val('0');
             $('#BrotherSlocInput').val('');
             $('#QtyPerPalletInput').val('');
+            $('#ProductStatusInput').val('Active');
+
         }
         function editProduct(id) {
             $.ajax({
@@ -77,6 +79,7 @@
                     $('#DefaultInput').val(p.Default);
                     $('#BrotherSlocInput').val(p.BrotherSloc);
                     $('#QtyPerPalletInput').val(p.QtyPerPallet);
+                    $('#ProductStatusInput').val(p.Status);
                     $('#productModal').modal('show');
                 },
                 error: function () { new swal('Error', 'Failed to load product', 'error'); }
@@ -102,6 +105,7 @@
                     "dataSrc": function (json) { return JSON.parse(json.d); }
                 },
                 "scrollX": true,
+
                 "columns": [
                     { "data": "FG_Id" },
                     { "data": "FG_SAP_No" },
@@ -133,6 +137,7 @@
                     { "data": "Default" },
                     { "data": "BrotherSloc" },
                     { "data": "QtyPerPallet" },
+                    { "data": "Status" },
                     { "data": "FG_Id", "render": function (id) { return '<a class="btn btn-info btn-edit" data-id="' + id + '">Edit</a>'; } },
                     { "data": "FG_Id", "render": function (id) { return '<a class="btn btn-info btn-delete" data-id="' + id + '">Delete</a>'; } }
                 ]
@@ -173,6 +178,7 @@
                     Default: parseInt($('#DefaultInput').val() || '0', 10),
                     BrotherSloc: $('#BrotherSlocInput').val(),
                     QtyPerPallet: parseFloat($('#QtyPerPalletInput').val() || '0')
+                    Status: $('#ProductStatusInput').val()
                 };
                 $.ajax({
                     type: 'POST',
@@ -231,6 +237,10 @@
                 <th>Default</th>
                 <th>Brother SLoc</th>
                 <th>Qty/Pallet</th>
+                <th>FG SAP No</th>
+                <th>Description</th>
+                <th>Customer SAP</th>
+                <th>Status</th>
                 <th>Edit</th>
                 <th>Delete</th>
               </tr>
@@ -274,6 +284,10 @@
            <div class="form-group"><label for="DefaultInput">Default:</label><select id="DefaultInput" class="form-control"><option value="0">No</option><option value="1">Yes</option></select></div>
            <div class="form-group"><label for="BrotherSlocInput">Brother SLoc:</label><input type="text" class="form-control" id="BrotherSlocInput" /></div>
            <div class="form-group"><label for="QtyPerPalletInput">Qty/Pallet:</label><input type="number" step="any" class="form-control" id="QtyPerPalletInput" /></div>
+           <div class="form-group"><label for="FGSapInput">FG SAP No:</label><input type="text" class="form-control" id="FGSapInput" required /></div>
+           <div class="form-group"><label for="FGDescInput">Description:</label><input type="text" class="form-control" id="FGDescInput" /></div>
+           <div class="form-group"><label for="CustomerSapInput">Customer SAP:</label><input type="text" class="form-control" id="CustomerSapInput" /></div>
+           <div class="form-group"><label for="ProductStatusInput">Status:</label><select id="ProductStatusInput" class="form-control"><option>Active</option><option>Inactive</option></select></div>
          </div>
          <div class="modal-footer">
            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
