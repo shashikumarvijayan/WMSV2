@@ -144,12 +144,6 @@
        <a href="000UserMaster.aspx">User Master</a>
    </li>
   
-   <li class="<%= Request.Url.AbsolutePath.ToLower().Contains("001Customer.aspx") ? "active" : "" %>">
-       <a href="001Customer.aspx">Customer</a>
-   </li>
-   <li class="<%= Request.Url.AbsolutePath.ToLower().Contains("002ProductInfo.aspx") ? "active" : "" %>">
-       <a href="002ProductInfo.aspx">Product Info</a>
-   </li>
                       </ul>
                 </nav>
             </div>
