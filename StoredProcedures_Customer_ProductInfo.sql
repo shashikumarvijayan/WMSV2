@@ -96,6 +96,26 @@ CREATE PROCEDURE [MES].[sp_ProductInfoMaster]
     @SAP_FG_Description NVARCHAR(300) = NULL,
     @Product_No NVARCHAR(64) = NULL,
     @Product_Name NVARCHAR(200) = NULL,
+    @Model NVARCHAR(100) = NULL,
+    @Drawing_Rev NVARCHAR(50) = NULL,
+    @JJ_Code NVARCHAR(50) = NULL,
+    @Cavity NVARCHAR(50) = NULL,
+    @Die_Line NVARCHAR(50) = NULL,
+    @Customer_Name NVARCHAR(200) = NULL,
+    @Customer_Address NVARCHAR(500) = NULL,
+    @Supplier_Name NVARCHAR(200) = NULL,
+    @Supplier_Address NVARCHAR(500) = NULL,
+    @CO NVARCHAR(100) = NULL,
+    @Importer NVARCHAR(200) = NULL,
+    @Qty_Per_Packing DECIMAL(18,4) = NULL,
+    @UOM NVARCHAR(16) = NULL,
+    @Min_Qty DECIMAL(18,4) = NULL,
+    @Max_Qty DECIMAL(18,4) = NULL,
+    @Default_Storage_Location NVARCHAR(32) = NULL,
+    @Division NVARCHAR(16) = NULL,
+    @Label_Format NVARCHAR(32) = NULL,
+    @BrotherSLOC NVARCHAR(32) = NULL,
+    @QtyPerPallet DECIMAL(18,4) = NULL,
     @Status NVARCHAR(50) = NULL
 AS
 BEGIN
@@ -104,7 +124,15 @@ BEGIN
 
     IF @Action = 'GetAll'
     BEGIN
-        SELECT FG_Id, FG_SAP_No, SAP_FG_Description, Product_No, Product_Name, Status
+
+        SELECT FG_Id, FG_SAP_No, SAP_FG_Description, Product_No, Product_Name,
+               Model, Drawing_Rev, JJ_Code, Cavity, Die_Line,
+               Customer_Name, Customer_Address,
+               Supplier_Name, Supplier_Address, CO, Importer,
+               Qty_Per_Packing, UOM, Min_Qty, Max_Qty,
+               Default_Storage_Location, Division, Label_Format,
+               BrotherSloc AS BrotherSLOC, QtyPerPallet,
+               Status 
         FROM dbo.ProductInfo
         WHERE ISNULL(Status,'Active') <> 'Inactive';
         RETURN;
@@ -112,7 +140,15 @@ BEGIN
 
     IF @Action = 'GetById'
     BEGIN
-        SELECT FG_Id, FG_SAP_No, SAP_FG_Description, Product_No, Product_Name, Status
+
+        SELECT FG_Id, FG_SAP_No, SAP_FG_Description, Product_No, Product_Name,
+               Model, Drawing_Rev, JJ_Code, Cavity, Die_Line,
+               Customer_Name, Customer_Address,
+               Supplier_Name, Supplier_Address, CO, Importer,
+               Qty_Per_Packing, UOM, Min_Qty, Max_Qty,
+               Default_Storage_Location, Division, Label_Format,
+               BrotherSloc AS BrotherSLOC, QtyPerPallet,
+               Status
         FROM dbo.ProductInfo
         WHERE FG_Id = @FG_Id;
         RETURN;
@@ -120,7 +156,15 @@ BEGIN
 
     IF @Action = 'GetDeleted'
     BEGIN
-        SELECT FG_Id, FG_SAP_No, SAP_FG_Description, Product_No, Product_Name, Status
+
+        SELECT FG_Id, FG_SAP_No, SAP_FG_Description, Product_No, Product_Name,
+               Model, Drawing_Rev, JJ_Code, Cavity, Die_Line,
+               Customer_Name, Customer_Address,
+               Supplier_Name, Supplier_Address, CO, Importer,
+               Qty_Per_Packing, UOM, Min_Qty, Max_Qty,
+               Default_Storage_Location, Division, Label_Format,
+               BrotherSloc AS BrotherSLOC, QtyPerPallet,
+               Status
         FROM dbo.ProductInfo
         WHERE Status = 'Inactive';
         RETURN;
@@ -138,8 +182,22 @@ BEGIN
     BEGIN
         IF @FG_Id = 0
         BEGIN
-            INSERT INTO dbo.ProductInfo (FG_SAP_No, SAP_FG_Description, Product_No, Product_Name, Status, WhoCreated, DateDataCreated)
-            VALUES (@FG_SAP_No, @SAP_FG_Description, @Product_No, @Product_Name, @Status, SYSTEM_USER, SYSUTCDATETIME());
+            INSERT INTO dbo.ProductInfo (
+                FG_SAP_No, SAP_FG_Description, Product_No, Product_Name,
+                Model, Drawing_Rev, JJ_Code, Cavity, Die_Line,
+                Customer_Name, Customer_Address,
+                Supplier_Name, Supplier_Address, CO, Importer,
+                Qty_Per_Packing, UOM, Min_Qty, Max_Qty,
+                Default_Storage_Location, Division, Label_Format,
+                BrotherSloc, QtyPerPallet, Status, WhoCreated, DateDataCreated)
+            VALUES (
+                @FG_SAP_No, @SAP_FG_Description, @Product_No, @Product_Name,
+                @Model, @Drawing_Rev, @JJ_Code, @Cavity, @Die_Line,
+                @Customer_Name, @Customer_Address,
+                @Supplier_Name, @Supplier_Address, @CO, @Importer,
+                @Qty_Per_Packing, @UOM, @Min_Qty, @Max_Qty,
+                @Default_Storage_Location, @Division, @Label_Format,
+                @BrotherSLOC, @QtyPerPallet, @Status, SYSTEM_USER, SYSUTCDATETIME());
             SET @FG_Id = SCOPE_IDENTITY();
         END
         ELSE
@@ -149,6 +207,26 @@ BEGIN
                 SAP_FG_Description = @SAP_FG_Description,
                 Product_No = @Product_No,
                 Product_Name = @Product_Name,
+                Model = @Model,
+                Drawing_Rev = @Drawing_Rev,
+                JJ_Code = @JJ_Code,
+                Cavity = @Cavity,
+                Die_Line = @Die_Line,
+                Customer_Name = @Customer_Name,
+                Customer_Address = @Customer_Address,
+                Supplier_Name = @Supplier_Name,
+                Supplier_Address = @Supplier_Address,
+                CO = @CO,
+                Importer = @Importer,
+                Qty_Per_Packing = @Qty_Per_Packing,
+                UOM = @UOM,
+                Min_Qty = @Min_Qty,
+                Max_Qty = @Max_Qty,
+                Default_Storage_Location = @Default_Storage_Location,
+                Division = @Division,
+                Label_Format = @Label_Format,
+                BrotherSloc = @BrotherSLOC,
+                QtyPerPallet = @QtyPerPallet,
                 Status = @Status,
                 WhoEdited = SYSTEM_USER,
                 DateDataEdited = SYSUTCDATETIME()

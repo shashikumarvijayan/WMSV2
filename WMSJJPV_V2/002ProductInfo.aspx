@@ -13,6 +13,44 @@
             $('#ProductNameInput').val('');
             $('#ProductStatusInput').val('Active');
         }
+
+        function productDetailsHtml(data) {
+            return `SAP No : ${data.FG_SAP_No}<br style='margin-bottom:10px;'>` +
+                `Description : ${data.SAP_FG_Description}<br style='margin-bottom:10px;'>` +
+                `Product No : ${data.Product_No}<br style='margin-bottom:10px;'>` +
+                `Product Name : ${data.Product_Name}<br style='margin-bottom:10px;'>` +
+                `Model : ${data.Model}<br style='margin-bottom:10px;'>` +
+                `Drawing Rev : ${data.Drawing_Rev}<br style='margin-bottom:10px;'>` +
+                `JJ Code : ${data.JJ_Code}<br style='margin-bottom:10px;'>` +
+                `Cavity : ${data.Cavity}<br style='margin-bottom:10px;'>` +
+                `Die Line : ${data.Die_Line}`;
+        }
+
+        function customerHtml(data) {
+            return `Name : ${data.Customer_Name}<br style='margin-bottom:10px;'>` +
+                `Address : ${data.Customer_Address}`;
+        }
+
+        function supplierHtml(data) {
+            return `Name : ${data.Supplier_Name}<br style='margin-bottom:10px;'>` +
+                `Address : ${data.Supplier_Address}<br style='margin-bottom:10px;'>` +
+                `C/O : ${data.CO}<br style='margin-bottom:10px;'>` +
+                `Importer : ${data.Importer}`;
+        }
+
+        function packagingHtml(row) {
+            const fmt = v => v == null ? '' : parseFloat(v).toLocaleString();
+            return `Qty / Packing : ${fmt(row.Qty_Per_Packing)}<br style='margin-bottom:10px;'>` +
+                `UOM : ${row.UOM}<br style='margin-bottom:10px;'>` +
+                `Min QTY : ${fmt(row.Min_Qty)}<br style='margin-bottom:10px;'>` +
+                `Max QTY : ${fmt(row.Max_Qty)}<br style='margin-bottom:10px;'>` +
+                `Default Storage Location : ${row.Default_Storage_Location}<br style='margin-bottom:10px;'>` +
+                `Division : ${row.Division}<br style='margin-bottom:10px;'>` +
+                `Label Format : ${row.Label_Format}<br style='margin-bottom:10px;'>` +
+                `Brother Storage Location : ${row.BrotherSLOC}<br style='margin-bottom:10px;'>` +
+                `Qty / Pallet : ${fmt(row.QtyPerPallet)}`;
+        }
+
         function editProduct(id) {
             $.ajax({
                 type: 'POST',
@@ -56,6 +94,29 @@
         }
         $(document).ready(function () {
             var table = $('#tblProducts').DataTable({
+
+                ajax: {
+                    url: '002ProductInfo.aspx/ProductInfoMaster',
+                    type: 'POST',
+                    contentType: 'application/json; charset=utf-8',
+                    data: function () { return JSON.stringify({ action: 'GetAll', product: {} }); },
+                    dataSrc: function (json) { return JSON.parse(json.d); }
+                },
+                columns: [
+                    { data: 'FG_Id' },
+                    { data: null, render: productDetailsHtml, width: '400px' },
+                    { data: null, render: customerHtml, width: '200px' },
+                    { data: null, render: supplierHtml, width: '400px' },
+                    { data: null, render: function (data, type, row) { return packagingHtml(row); } },
+                    { data: 'Status' },
+                    {
+                        data: 'FG_Id', orderable: false, searchable: false,
+                        render: function (id) { return '<a class="btn btn-info btn-edit" data-id="' + id + '">Edit</a>'; }
+                    },
+                    {
+                        data: 'FG_Id', orderable: false, searchable: false,
+                        render: function (id) { return '<a class="btn btn-info btn-delete" data-id="' + id + '">Delete</a>'; }
+
                 'ajax': {
                     'url': '002ProductInfo.aspx/ProductInfoMaster',
                     'type': 'POST',
@@ -147,6 +208,12 @@
                         <thead>
                             <tr>
                                 <th>Id</th>
+
+                                <th>Product Details</th>
+                                <th>Customer</th>
+                                <th>Supplier</th>
+                                <th>Packaging</th>
+
                                 <th>SAP</th>
                                 <th>Description</th>
                                 <th>Product No</th>
